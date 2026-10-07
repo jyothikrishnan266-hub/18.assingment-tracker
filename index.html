@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <h1>📚 Assignment Tracker</h1>
+      <p>Manage your assignments and never miss a deadline.</p>
+    </header>
+
+    <section class="dashboard">
+      <div class="card">
+        <h3>Total</h3>
+        <span id="totalCount">0</span>
+      </div>
+
+      <div class="card">
+        <h3>Pending</h3>
+        <span id="pendingCount">0</span>
+      </div>
+
+      <div class="card">
+        <h3>Completed</h3>
+        <span id="completedCount">0</span>
+      </div>
+
+      <div class="card">
+        <h3>High Priority</h3>
+        <span id="highCount">0</span>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <h2>Add Assignment</h2>
+
+      <form id="assignmentForm">
+
+        <input
+          type="text"
+          id="title"
+          placeholder="Assignment title"
+          required
+        >
+
+        <input
+          type="text"
+          id="subject"
+          placeholder="Subject"
+          required
+        >
+
+        <input
+          type="date"
+          id="dueDate"
+          required
+        >
+
+        <select id="priority">
+          <option value="Low">Low Priority</option>
+          <option value="Medium" selected>Medium Priority</option>
+          <option value="High">High Priority</option>
+        </select>
+
+        <button type="submit">+ Add Assignment</button>
+
+      </form>
+    </section>
+
+    <section class="controls">
+
+      <input
+        type="text"
+        id="search"
+        placeholder="🔍 Search assignments..."
+      >
+
+      <select id="filter">
+        <option value="all">All Assignments</option>
+        <option value="pending">Pending</option>
+        <option value="completed">Completed</option>
+        <option value="high">High Priority</option>
+      </select>
+
+    </section>
+
+    <section>
+      <div id="assignmentList"></div>
+
+      <div id="emptyMessage" class="empty">
+        <div>📭</div>
+        <h3>No assignments found</h3>
+        <p>Add an assignment to get started.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
